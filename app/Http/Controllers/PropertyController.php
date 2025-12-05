@@ -26,7 +26,7 @@ class PropertyController extends Controller
             $properties = $this->listAllProperties->execute();
             return response()->json([
                 'data' => array_map(fn($item) => [
-                    'title'        => $item->getTitle()
+                    'title' => $item->getTitle()
                 ], $properties)
             ]);
         } catch (RuntimeException $e) {

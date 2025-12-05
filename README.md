@@ -1,4 +1,19 @@
-# EasyBroker API Challenge – Laravel (Minimal README)
+# EasyBroker API Challenge – Laravel
+
+## Architecture
+
+This project uses a **feature-first (vertical slice) architecture**, where all logic for a feature lives in a single folder:
+
+
+Each slice contains:
+
+- **Contracts** – defines the provider abstraction (e.g., PropertiesProvider)
+- **Services** – EasyBroker API client implementation
+- **UseCases** – application logic (pagination, iteration, mapping)
+- **DTOs** – typed data objects instead of raw arrays
+
+This structure keeps the domain logic **isolated, testable, and independent** of Laravel delivery layers, making it easy to extend the feature or switch providers without affecting unrelated parts of the system.
+
 
 ## Setup
 
